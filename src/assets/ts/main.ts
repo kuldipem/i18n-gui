@@ -81,7 +81,7 @@ exportData.on('click', (e: Event) => {
                 .then(function (zip: any) {
                     zip.generateAsync({type:"blob"})
                     .then(function (blob: any) {
-                        FileSaver.saveAs(blob, "hello.zip");
+                        FileSaver.saveAs(blob, `i18n-${new Date().getTime()}.zip`);
                     });
                     
                 }, function (e: Event) {
